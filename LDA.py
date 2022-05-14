@@ -48,4 +48,3 @@ class LinearDiscriminantAnalysis:
             sigma = X_test @ self.cov @ self.means[k] - 0.5*(self.means[k].T @self.cov@self.means[k]) + np.log(self.priors[k])
             SIGMA.append(sigma)
         return np.argmax(np.array(SIGMA), axis=0)
-            
